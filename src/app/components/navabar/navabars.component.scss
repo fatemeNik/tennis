@@ -1,31 +1,12 @@
-.navbar a,
-.sec-about p {
-  text-align: center;
+.navbar-brand img{
+    height: 60px;
+    
 }
+header{
 
-.navbar a {
-  font-size: 18px;
+    background-image: url(../../../assets/images/816149.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
 }
-
-.navbar .fa-external-link {
-  font-size: 20px;
-}
-
-.bg-dark{
-  background-color:none !important;
-}
-.navbar-brand{
-  font-size: 40px;
-}
-
-.navbar{
-  background-image: url(../../../assets/images/816149.jpg);
-  height: 100vh;
-  background-attachment: fixed;
-  background-position: center;
-}
-
-.navbar-nav{
-  height: 800px;
-}
-

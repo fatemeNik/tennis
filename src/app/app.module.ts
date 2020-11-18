@@ -44,6 +44,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavabarsComponent } from './components/navabar/navabars.component';
 import { MainPageComponent } from './pages/main-page/main-page.component';
 import { TableComponent } from './components/table-palyer/table.component';
+import { TestComponent } from './components/test/test.component';
 // import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 // import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
@@ -53,7 +54,8 @@ import { TableComponent } from './components/table-palyer/table.component';
     AppComponent,
     MainPageComponent,
     TableComponent,
-    NavabarsComponent
+    NavabarsComponent,
+    TestComponent
   ],
   imports: [
     BrowserAnimationsModule,
