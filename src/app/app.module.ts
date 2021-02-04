@@ -1,3 +1,5 @@
+import { LoginComponent } from './components/login/login.component';
+import { RouterModule, ROUTES, Routes } from '@angular/router';
 import { ApiService } from 'src/app/services/api.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
@@ -36,7 +38,7 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
-import { AppRoutingModule } from './app-routing.module';
+// import { AppRoutingModule, Routes, routes } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -44,7 +46,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavabarsComponent } from './components/navabar/navabars.component';
 import { MainPageComponent } from './pages/main-page/main-page.component';
 import { TableComponent } from './components/table-palyer/table.component';
-import { TestComponent } from './components/test/test.component';
+import { from } from 'rxjs';
+import { AppRoutingModule } from './app-routing.module';
+import {routes} from './app-routing.module';
+import { RankingComponent } from './components/ranking/ranking.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { TournamentComponent } from './components/tournament/tournament.component';
+
+
 // import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 // import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
@@ -55,12 +64,15 @@ import { TestComponent } from './components/test/test.component';
     MainPageComponent,
     TableComponent,
     NavabarsComponent,
-    TestComponent
-  ],
+    LoginComponent,
+    RankingComponent,
+    ProfileComponent,
+    TournamentComponent
+    ],
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
-    AppRoutingModule, CommonModule, ReactiveFormsModule,FormsModule,HttpClientModule,
+    AppRoutingModule, CommonModule, ReactiveFormsModule, FormsModule, HttpClientModule,
     MatAutocompleteModule,
     MatBadgeModule,
     MatBottomSheetModule,
@@ -95,8 +107,13 @@ import { TestComponent } from './components/test/test.component';
     MatTabsModule,
     MatToolbarModule,
     MatTooltipModule,
-    MatTreeModule
+    MatTreeModule,
+    ReactiveFormsModule,
     //AngularFontAwesomeModule
+    RouterModule.forRoot(routes)
+  ],
+  exports: [
+    RouterModule
   ],
   providers: [
     

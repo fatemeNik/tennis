@@ -1,0 +1,36 @@
+<div class="authentication">
+  <div>
+
+    <mat-tab-group>
+      <mat-tab label="ورود">
+        <div class="login">
+          <div class="login-triangle"></div>
+
+          <h2 class="login-header">ورود</h2>
+          <p>{{text}}</p>
+          <form [formGroup]="loginForm" (ngSubmit)="login()" class="login-container">
+            <p><input formControlName="iripin" type="text" placeholder="Iripin"></p>
+            <p><input formControlName="password" type="password" placeholder="Password"></p>
+            <!-- <p><input formControlName="con_password" type="password" placeholder="Confirm Password" ></p> -->
+            <p><input type="submit" value="ورود"></p>
+          </form>
+        </div>
+      </mat-tab>
+
+      <mat-tab label="ثبت نام"> 
+        <div class="login">
+          <div class="login-triangle"></div>
+
+          <h2 class="login-header">ثبت نام</h2>
+          <form [formGroup]="SignUpForm" (ngSubmit)="login()" class="login-container">
+            <p><input formControlName="a_iripin" type="text" placeholder="Iripin"></p>
+            <p><input formControlName="a_password" type="password" placeholder="Password"></p>
+            <p><input formControlName="a_con_password" type="password" placeholder="Confirm Password" ></p>
+            <p><input type="submit" value="ثبت نام"></p>
+          </form>
+          
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+</div>

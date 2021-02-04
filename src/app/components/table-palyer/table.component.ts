@@ -9,12 +9,10 @@ export interface player_table {
   last_name: string;
   city: string;
   iripin: string;
-  
+  image: string;
 }
 
-const ELEMENT_DATA: player_table[] = [
-];
-
+// const ELEMENT_DATA: player_table[] = [];
 @Component({
   selector: 'app-table',
   templateUrl: './table.component.html',
@@ -27,6 +25,7 @@ const ELEMENT_DATA: player_table[] = [
     ]),
   ],
 })
+
 export class TableComponent implements OnInit {
 
   dataSource: any;
@@ -38,9 +37,7 @@ export class TableComponent implements OnInit {
 
     this.api.get_player_data().subscribe(data => {
       this.dataSource = data;
-      
     });
-
     this.loading = true;
   }
 
@@ -48,4 +45,3 @@ export class TableComponent implements OnInit {
   }
 
 }
-
